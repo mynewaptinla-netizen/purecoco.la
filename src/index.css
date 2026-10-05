@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-coco-sand: #f5f2ed;
+  --color-coco-green: #2d5a27;
+  --color-coco-blue: #a8dadc;
+  --color-coco-ink: #1a1a1a;
+}
+
+@layer base {
+  body {
+    @apply bg-coco-sand text-coco-ink font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight uppercase;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap');
+
+@layer utilities {
+  .animate-marquee-fast {
+    animation: marquee-fast 10s linear infinite;
+  }
+  @keyframes marquee-fast {
+    from { transform: translateX(100vw); }
+    to { transform: translateX(-100%); }
+  }
+}

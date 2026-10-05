@@ -1,0 +1,9 @@
+.env*
+!.env.example
+*.py
+check-*.js
+test-*.js
+test-*.cjs
+test.js
+dist
+node_modules
